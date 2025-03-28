@@ -26,7 +26,7 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%Y-%m-%d %H:%m %a}",
+        "format": "{:%Y-%m-%d %H:%M %a}",
         "format-alt": "{:%A, Week %U, %Y}",
         "interval": 30
     },
