@@ -1,9 +1,8 @@
 spawn-at-startup "mako"
 spawn-at-startup "waybar"
 spawn-at-startup "sh" "-c" "swaybg -m fill -i ~/Pictures/manuel-cosentino-n--CMLApjfI-unsplash.jpg"
-// spawn-at-startup "swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 'swaylock -f' before-sleep 'swaylock -f'"
 spawn-at-startup "swayidle" "-w" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f" "timeout" "601" "niri msg action power-off-monitors" "unlock" "killall -SIGUSR1 swaylock"
-
+spawn-at-startup "playerctld" "daemon"
 spawn-at-startup "xwayland-satellite" ":12"
 
 environment {
@@ -41,6 +40,9 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
+    XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
+    XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
 
     Mod+Q { close-window; }
     Alt+F4 { close-window; }
