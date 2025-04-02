@@ -274,10 +274,10 @@ animations {
 }
 
 layout {
-    gaps 16
+    gaps 8
     struts {
-        left 16
-        right 16
+        left 12
+        right 12
     }
 }
 
