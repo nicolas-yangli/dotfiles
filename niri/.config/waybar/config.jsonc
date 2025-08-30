@@ -33,7 +33,7 @@
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%Y-%m-%d %H:%M %a}",
-        "format-alt": "{:%A, Week %U, %Y}",
+        "format-alt": "{:%A, Week %V, %Y}",
         "interval": 30
     },
     "cpu": {
