@@ -8,6 +8,7 @@
     ],
     "modules-right": [
         "idle_inhibitor",
+        "upower",
         "pulseaudio",
         "cpu",
         "memory",
@@ -19,6 +20,11 @@
             "activated": "",
             "deactivated": ""
         }
+    },
+    "upower": {
+        "native-path": "hidpp_battery_0",
+        "format": "󰍽 {percentage}",
+        "show-icon": false
     },
     "tray": {
         // "icon-size": 21,
