@@ -1,7 +1,7 @@
 spawn-at-startup "mako"
 spawn-at-startup "waybar"
 spawn-at-startup "sh" "-c" "swaybg -m fill -i ~/Pictures/manuel-cosentino-n--CMLApjfI-unsplash.jpg"
-spawn-at-startup "swayidle" "-w" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f" "timeout" "601" "niri msg action power-off-monitors" "unlock" "killall -SIGUSR1 swaylock"
+spawn-at-startup "swayidle" "-w" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f" "timeout" "601" "niri msg action power-off-monitors" "unlock" "killall -SIGUSR1 swaylock" "timeout" "1200" "systemctl suspend"
 spawn-at-startup "playerctld" "daemon"
 spawn-at-startup "xwayland-satellite" ":12"
 
