@@ -43,6 +43,13 @@ binds {
     XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
 
+
+    // Open/close the Overview: a zoomed-out view of workspaces and windows.
+    // You can also move the mouse into the top-left hot corner,
+    // or do a four-finger swipe up on a touchpad.
+    Mod+O repeat=false { toggle-overview; }
+
+
     Mod+Q { close-window; }
     Alt+F4 { close-window; }
 
@@ -207,6 +214,8 @@ binds {
     Mod+Ctrl+F { expand-column-to-available-width; }
 
     Mod+C { center-column; }
+    // Center all fully visible columns on screen.
+    Mod+Ctrl+C { center-visible-columns; }
 
     // Finer width adjustments.
     // This command can also:
